@@ -2,15 +2,19 @@
 #define LEVEL
 
 #include "GameState.h"
+#include "../Mechanics/Map.h"
 
 class Level : public GameState
 {
+private:
+	Map map;
+
 public:
-	void init();
-	void update();
-	void fixUpdate();
-	void draw();
-	void release();
+	void Init();
+	void Update();
+	void FixUpdate();
+	void Draw();
+	void Release();
 };
 
 #endif // !GAMESTATE

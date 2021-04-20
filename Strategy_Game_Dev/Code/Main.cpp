@@ -2,6 +2,7 @@
 #include "Component/Graphic.h"
 #include "Component/DInput.h"
 #include "Component/GameStateManager.h"
+#include "Component/DataCenter.h"
 
 //int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd) //App only
 int main()	//App and Console
@@ -31,6 +32,7 @@ int main()	//App and Console
 	Graphic::GetInstance()->ReleaseInstance();
 	DInput::GetInstance()->ReleaseInstance();
 	GWindows::GetInstance()->ReleaseInstance();
+	DataCenter::GetInstance()->ReleaseInstance();
 
 	return 0;
 }

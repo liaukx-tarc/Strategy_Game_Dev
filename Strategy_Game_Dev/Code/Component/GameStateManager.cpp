@@ -29,12 +29,13 @@ GameStateManager::GameStateManager()
 	g_Timer->init(GAME_FPS);
 
 	GameState* level = new Level();
+	level->Init();
 	stateList.push_back(level);
 }
 
 GameStateManager::~GameStateManager()
 {
-	stateList[currentState]->release();
+	stateList[currentState]->Release();
 
 	for (int i = 0; i < stateList.size(); i++)
 	{
@@ -47,7 +48,7 @@ GameStateManager::~GameStateManager()
 
 void GameStateManager::Update()
 {
-	stateList[currentState]->update();
+	stateList[currentState]->Update();
 
 	framesToUpdate = g_Timer->framesToUpdate();
 
@@ -55,14 +56,14 @@ void GameStateManager::Update()
 	{
 		for (int i = 0; i < framesToUpdate; i++)
 		{
-			stateList[currentState]->fixUpdate();
+			stateList[currentState]->FixUpdate();
 		}
 	}
 
 	else
 	{
-		stateList[currentState]->init();
-		stateList[preState]->release();
+		stateList[currentState]->Init();
+		stateList[preState]->Release();
 	}
 }
 
@@ -70,7 +71,7 @@ void GameStateManager::Draw()
 {
 	if (currentState == preState)
 	{
-		stateList[currentState]->draw();
+		stateList[currentState]->Draw();
 	}
 
 	else

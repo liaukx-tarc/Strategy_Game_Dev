@@ -1,26 +1,32 @@
 #include "Level.h"
+#include "../Component/DataCenter.h"
+#include "../Component/DInput.h"
 
-void Level::init()
+void Level::Init()
 {
+	DataCenter::GetInstance()->Inti();
+	DataCenter::GetInstance()->screenPos.x = 0;
+	DataCenter::GetInstance()->screenPos.y = 0;
 
+	DataCenter::GetInstance()->LoadData("Data/OriginMap.txt");
 }
 
-void Level::update()
+void Level::Update()
 {
-
+	
 }
 
-void Level::fixUpdate()
+void Level::FixUpdate()
 {
-
+	map.MapScrolling();
 }
 
-void Level::draw()
+void Level::Draw()
 {
-
+	map.Draw();
 }
 
-void Level::release()
+void Level::Release()
 {
-
+	DataCenter::GetInstance()->Release();
 }

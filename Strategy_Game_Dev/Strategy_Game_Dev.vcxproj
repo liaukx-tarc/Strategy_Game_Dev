@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Code\Component\DataCenter.cpp" />
     <ClCompile Include="Code\Component\DInput.cpp" />
     <ClCompile Include="Code\Component\GameStateManager.cpp" />
     <ClCompile Include="Code\Component\Graphic.cpp" />
@@ -134,8 +135,11 @@
     <ClCompile Include="Code\Component\G_Windows.cpp" />
     <ClCompile Include="Code\GameState\Level.cpp" />
     <ClCompile Include="Code\Main.cpp" />
+    <ClCompile Include="Code\Mechanics\Map.cpp" />
+    <ClCompile Include="Code\Mechanics\Map.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Code\Component\DataCenter.h" />
     <ClInclude Include="Code\Component\DInput.h" />
     <ClInclude Include="Code\Component\GameStateManager.h" />
     <ClInclude Include="Code\Component\Graphic.h" />
@@ -150,6 +154,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resource\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Data\OriginMap.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

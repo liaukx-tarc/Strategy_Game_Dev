@@ -25,6 +25,24 @@
     <Filter Include="Source Files\GameState">
       <UniqueIdentifier>{8f8eed38-dd38-4c7b-8279-7f2a808a9980}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Map">
+      <UniqueIdentifier>{d6f00c25-f613-4021-aa4d-75ce2fa224c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Unit">
+      <UniqueIdentifier>{ec43e417-cbcc-40c4-b391-01a4da0eed3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Game">
+      <UniqueIdentifier>{964badcd-52b3-443e-afe9-46dfb19bcf20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Mechanics">
+      <UniqueIdentifier>{eb151b86-6e73-459d-b27d-500ed76828ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Mechanics">
+      <UniqueIdentifier>{012fdbe4-7bf6-464b-baf8-bad908889bdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Data">
+      <UniqueIdentifier>{0c27fde1-e419-46cd-83fe-2a02492dfd24}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Code\Main.cpp">
@@ -47,6 +65,15 @@
     </ClCompile>
     <ClCompile Include="Code\GameState\Level.cpp">
       <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Component\DataCenter.cpp">
+      <Filter>Source Files\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Mechanics\Map.h">
+      <Filter>Header Files\Mechanics</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Mechanics\Map.cpp">
+      <Filter>Source Files\Mechanics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -74,15 +101,23 @@
     <ClInclude Include="Code\GameState\Level.h">
       <Filter>Header Files\GameState</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Strategy_Game_Dev.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    <ClInclude Include="Code\Component\DataCenter.h">
+      <Filter>Header Files\Component</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resource\Icon.ico">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\Game</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Strategy_Game_Dev.rc">
+      <Filter>Resource Files\Game</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Data\OriginMap.txt">
+      <Filter>Resource Files\Data</Filter>
+    </Text>
   </ItemGroup>
 </Project>
